@@ -28,14 +28,14 @@ class YandexTurboBehavior extends Behavior
      * @inheritdoc
      * @throws InvalidConfigException
      */
-    public function init(): void
+    public function init()
     {
         if (!is_callable($this->dataClosure) && !is_array($this->dataClosure)) {
             throw new InvalidConfigException('dataClosure isn\'t callable or array.');
         }
     }
 
-    public function generateYandexTurboItems(): array
+    public function generateYandexTurboItems()
     {
         $result = [];
 

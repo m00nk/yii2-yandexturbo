@@ -78,7 +78,7 @@ class YandexTurbo extends Module
      * @inheritdoc
      * @throws InvalidConfigException
      */
-    public function init(): void
+    public function init()
     {
         parent::init();
 
@@ -107,7 +107,7 @@ class YandexTurbo extends Module
      * @return string
      * @throws InvalidConfigException
      */
-    public function getRssFeed(): string
+    public function getRssFeed()
     {
         if (!($xml = $this->cacheProvider->get($this->cacheKey))) {
             $xml = $this->buildRssFeed();
@@ -121,7 +121,7 @@ class YandexTurbo extends Module
     /**
      * @return void
      */
-    public function clearCache(): void
+    public function clearCache()
     {
         $this->cacheProvider->delete($this->cacheKey);
     }
@@ -130,7 +130,7 @@ class YandexTurbo extends Module
      * @return string
      * @throws InvalidConfigException
      */
-    protected function buildRssFeed(): string
+    protected function buildRssFeed()
     {
         $items = [];
 
@@ -175,7 +175,7 @@ class YandexTurbo extends Module
      * @param array $elements
      * @return string
      */
-    protected function buildRssXml(array $elements): string
+    protected function buildRssXml(array $elements)
     {
         $doc = new DOMDocument("1.0", "utf-8");
 

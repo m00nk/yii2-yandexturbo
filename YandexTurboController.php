@@ -16,7 +16,7 @@ class YandexTurboController extends Controller
      * @return string
      * @throws \yii\base\InvalidConfigException
      */
-    public function actionIndex(): string
+    public function actionIndex()
     {
         /** @var YandexTurbo $module */
         $module = $this->module;
